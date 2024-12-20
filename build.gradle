@@ -37,18 +37,3 @@ allprojects {
     }
 }
 
-// Для генерации .jar файла
-jar {
-    enabled = true // чтобы генерировать jar-файл
-    destinationDirectory = file("$build/libs")
-    from sourceSets.main.output
-}
-
-// Для генерации документации
-javadoc {
-    enabled = true // чтобы генерировать javadoc
-    source = sourceSets.main.allJava
-    destinationDir = file("$build/docs/javadoc")
-    options.encoding = "UTF-8"
-}
-
